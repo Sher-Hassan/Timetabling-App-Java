@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.timetablejava.RemoveClass">
+    <VBox spacing="10" alignment="TOP_CENTER" layoutX="10" layoutY="10">
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Class ID:"/>
+            <TextField fx:id="classIDField"/>
+            <Button text="Remove" onAction="#handleRemoveClass"/>
+        </HBox>
+        <TableView fx:id="timetableTable" prefHeight="338.0" prefWidth="722.0">
+            <columns>
+                <TableColumn fx:id="colID" text="ID"/>
+                <TableColumn fx:id="colStudentName" text="Student Name"/>
+                <TableColumn fx:id="colTeacherName" text="Teacher Name"/>
+                <TableColumn fx:id="colRoomName" text="Room Name"/>
+                <TableColumn fx:id="colCourseName" text="Course Name"/>
+                <TableColumn fx:id="colDay" text="Day"/>
+                <TableColumn fx:id="colStartTime" text="Start Time"/>
+                <TableColumn fx:id="colEndTime" text="End Time"/>
+                <TableColumn fx:id="colSection" text="Section"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.timetablejava.StudentWise">
+    <HBox layoutX="10" layoutY="10" spacing="10">
+        <Label text="Student Name:"/>
+        <TextField fx:id="studentNameField"/>
+        <Button text="Search" onAction="#handleSearch"/>
+    </HBox>
+    <TableView fx:id="timetableTable" layoutY="50" prefHeight="338.0" prefWidth="722.0">
+        <columns>
+            <TableColumn fx:id="colID" text="ID"/>
+            <TableColumn fx:id="colStudentName" text="Student Name"/>
+            <TableColumn fx:id="colTeacherName" text="Teacher Name"/>
+            <TableColumn fx:id="colRoomName" text="Room Name"/>
+            <TableColumn fx:id="colCourseName" text="Course Name"/>
+            <TableColumn fx:id="colDay" text="Day"/>
+            <TableColumn fx:id="colStartTime" text="Start Time"/>
+            <TableColumn fx:id="colEndTime" text="End Time"/>
+            <TableColumn fx:id="colSection" text="Section"/>
+        </columns>
+    </TableView>
+</AnchorPane>

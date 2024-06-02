@@ -1,0 +1,78 @@
+create database timetable;
+USE timetable;
+CREATE TABLE Courses (
+    CourseID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Rooms (
+    RoomID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Students (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Teachers (
+    TeacherID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Timetable (
+    TimetableID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT NOT NULL,
+    TeacherID INT NOT NULL,
+    RoomID INT NOT NULL,
+    CourseID INT NOT NULL,
+    Day VARCHAR(50) NOT NULL,
+    StartTime TIME NOT NULL,
+    EndTime TIME NOT NULL,
+    Section VARCHAR(50) NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (TeacherID) REFERENCES Teachers(TeacherID),
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+
+-- Insert dummy data into Students table
+INSERT INTO Students (StudentID, Name) VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie'),
+(4, 'David');
+
+-- Insert dummy data into Teachers table
+INSERT INTO Teachers (TeacherID, Name) VALUES
+(1, 'Professor X'),
+(2, 'Professor Y'),
+(3, 'Professor Z'),
+(4, 'Professor A');
+
+-- Insert dummy data into Rooms table
+INSERT INTO Rooms (RoomID, Name) VALUES
+(1, 'Room 101'),
+(2, 'Room 102'),
+(3, 'Room 103'),
+(4, 'Room 104');
+
+-- Insert dummy data into Courses table
+INSERT INTO Courses (CourseID, Name) VALUES
+(1, 'Math 101'),
+(2, 'Physics 101'),
+(3, 'Chemistry 101'),
+(4, 'Biology 101');
+
+
+-- Insert dummy data into Timetable table
+INSERT INTO Timetable (StudentID, TeacherID, RoomID, CourseID, Day, StartTime, EndTime, Section) VALUES
+(1, 1, 1, 1, 'Monday', '08:00:00', '09:00:00', 'A'),
+(2, 2, 2, 2, 'Monday', '09:00:00', '10:00:00', 'B'),
+(3, 3, 3, 3, 'Tuesday', '10:00:00', '11:00:00', 'A'),
+(4, 4, 4, 4, 'Wednesday', '11:00:00', '12:00:00', 'B'),
+(1, 2, 3, 4, 'Thursday', '12:00:00', '13:00:00', 'A'),
+(2, 3, 4, 1, 'Friday', '13:00:00', '14:00:00', 'B'),
+(3, 4, 1, 2, 'Saturday', '14:00:00', '15:00:00', 'A'),
+(4, 1, 2, 3, 'Sunday', '15:00:00', '16:00:00', 'B');
+

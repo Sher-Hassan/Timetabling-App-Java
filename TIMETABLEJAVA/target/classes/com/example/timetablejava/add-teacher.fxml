@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="280.0" prefWidth="535.0" spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.timetablejava.AddTeacher">
+   <children>
+       <Label text="Enter Teacher Name:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+       <TextField fx:id="teacherNameField" promptText="Teacher Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+       <HBox alignment="CENTER" spacing="10">
+          <children>
+              <Button onAction="#handleAddTeacher" text="Add">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+              <Button onAction="#handleRemoveTeacher" text="Remove">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+          </children>
+       </HBox>
+   </children>
+</VBox>

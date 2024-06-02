@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.timetablejava.MenuController">
+   <children>
+      <ImageView fitHeight="573.0" fitWidth="831.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/TIMETABLEJAVA.jpg" />
+         </image></ImageView>
+      <Label layoutX="29.0" prefHeight="62.0" prefWidth="766.0" style="-fx-border-color: white; -fx-border-width: 5px;" text="BAHRIA UNIVERSITY, ISLAMABAD">
+         <font>
+            <Font name="Bodoni MT" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="62.0" style="-fx-border-color: white;" text="TIMETABLING SYSTEM">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewtimetable" layoutX="29.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleViewTimetable" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="View Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="studentwise" layoutX="29.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleStudentWise" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Student Wise Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="teacherwise" layoutX="29.0" layoutY="191.0" mnemonicParsing="false" onAction="#handleTeacherWise" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Teacher Wise Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="coursewise" layoutX="29.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleCourseWise" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Course Wise Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="daywise" layoutX="29.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleDayWise" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Day Wise Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="addclass" layoutX="29.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleAddClass" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Add Class">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeclass" layoutX="29.0" layoutY="428.0" mnemonicParsing="false" onAction="#handleRemoveClass" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Remove Class">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="addteacher" layoutX="29.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleAddTeacher" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Add/Remove Teacher">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="addstudent" layoutX="29.0" layoutY="519.0" mnemonicParsing="false" onAction="#handleAddStudent" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Add/Remove Student">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="362.0" fitWidth="412.0" layoutX="354.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bulogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sectionwise" layoutX="29.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleSectionWise" prefHeight="24.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" text="Section Wise Timetable">
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
